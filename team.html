@@ -1,0 +1,179 @@
+<style>
+.team-members:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.team-members {
+    display: flex;
+    cursor: pointer;
+}
+
+.team-members__member {
+  padding-bottom: 5px;
+  border-bottom: 4px solid transparent;
+  width: 50%;
+}
+
+
+.team-members__photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+  padding-bottom: 100%;
+  position:relative;
+}
+
+  @media screen and (min-width: 1000px) {
+    .team-members__member {
+        width: 25%;
+    }
+  }
+
+.team-members__member--active {
+    border-bottom: 4px solid #002054;
+}
+
+.team-members__photo--1 {
+    background-image:url(https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/57294239356fb092b258c8f2/1462321723309/team-1a.jpg);
+}
+
+.team-members__member:hover .team-members__photo--1,
+.team-members__photo--1.team-members__photo--active {
+    background-image:url(https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/5729423960b5e9e5b973574d/1462321723394/team-1b.jpg);
+}
+
+.team-members__photo--2 {
+    background-image:url(https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/5729423a356fb092b258c8f5/1462321724050/team-2a.jpg);
+}
+
+.team-members__member:hover .team-members__photo--2,
+.team-members__photo--2.team-members__photo--active {
+    background-image:url(https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/5729423a60b5e9e5b9735756/1462321723635/team-2b.jpg);
+}
+
+.team-members__photo--3 {
+    background-image:url(https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/57484d9fb09f954951e1c171/1464356256966/team-3a-flip.jpg);
+}
+
+.team-members__member:hover .team-members__photo--3,
+.team-members__photo--3.team-members__photo--active {
+    background-image:url(https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/57484d9f60b5e9b81420fada/1464356256805/team-3b-flip.jpg);
+}
+
+.team-members__photo--4 {
+    background-image:url(https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/5729423b60b5e9e5b9735799/1462321724564/team-4a.jpg);
+}
+
+.team-members__member:hover .team-members__photo--4,
+.team-members__photo--4.team-members__photo--active {
+    background-image:url(https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/5729423b356fb092b258c8fc/1462321724517/team-4b.jpg);
+}
+
+  .preload {display:none !important;}
+.team-members__name,
+.team-members__position {
+    display: block;
+  text-align:center;
+}
+
+.team-members__name {
+    font-weight: bold;
+    font-size: 20px;
+  padding-top:10px;
+}
+
+.team-bios {
+    padding-top: 20px;
+}
+
+.team-bios__bio {
+    display: none;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 550px) {
+  .team-members__name {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .team-members__position {
+    font-size: 13px;
+    line-height: 1.2;
+    padding-top: 5px;
+  }
+}
+
+</style>
+
+<div class="team-members">
+    <div class="team-members__member">
+        <div class="team-members__photo team-members__photo--1" data-member="marc"></div>
+        <div class="team-members__info">
+            <span class="team-members__name">Marc Becker</span>
+            <span class="team-members__position">Chief Executive Officer</span>
+        </div>
+    </div>
+    <div class="team-members__member">
+        <div class="team-members__photo team-members__photo--2"  data-member="ben"></div>
+        <div class="team-members__info">
+            <span class="team-members__name">Ben Taylor</span>
+            <span class="team-members__position">Founder & Creative Director</span>
+        </div>
+    </div>
+    <div class="team-members__member">
+        <div class="team-members__photo team-members__photo--3" data-member="daniel"></div>
+        <div class="team-members__info">
+            <span class="team-members__name">Daniel Barber</span>
+            <span class="team-members__position">Chief Strategy Officer</span>
+        </div>
+    </div>
+    <div class="team-members__member">
+        <div class="team-members__photo team-members__photo--4" data-member="mat"></div>
+        <div class="team-members__info">
+            <span class="team-members__name">Mat Guillen</span>
+            <span class="team-members__position">Art Director</span>
+        </div>
+    </div>
+</div>
+
+<div class="team-bios">
+    <p id="marc" class="team-bios__bio">Marc spent 7 years of his career at Universal Pictures as an Executive in the Global Brand Marketing team.  There he worked closely with filmmakers, key stakeholders and brands to ensure a consistent global brand strategy for Universal’s films and franchises.  He helped develop unique, synergistic campaigns to integrate films across the various NBCU/Comcast platforms collaborating with TV networks, digital channels, Comcast and Universal Parks & Resorts. In 2014, while working full time at Universal, Marc earned his MBA at the USC Marshall School of Business. At Universal, Marc lent his talents to the success of many film campaigns and brand extensions. Most notably, he helped launch the Despicable Me franchise and enhance the Fast & Furious saga.<br><br>After using Tangent as a trusted vendor for several years, Marc left Universal and joined the Tangent team to oversee business operations and lead the charge for future business development.</p>
+
+    <p id="ben" class="team-bios__bio">Ben quite literally grew up in an ad agency and - metaphorically - has entertainment pulsing through his bloodstream. While other kids played with Nintendo, he played with Photoshop… and maybe a little Nintendo, too. At 15 during his first job at Blockbuster video (R.I.P.) he watched almost the entire store until he became “The Human IMDb."<br><br>In his past lives, Ben served as Art Director for the world-renowned luxury brand Oliver Peoples, worked on the design team at the innovative marketing agency Five33, and worked in Retail Design for American Apparel - helping them become the fastest growing retail chain in history. Capitalizing on his natural passion and talent, Ben went on to become Founder and Creative Director of The Tangent Agency - bringing his fresh, bold sense of style to every project he touches and assembling a top-notch creative team to do the same.</p>
+
+    <p id="daniel" class="team-bios__bio">Daniel is an unapologetic super-geek who has spent his professional life immersed in the entertainment industry, forging a unique trail in multiplatform storytelling.<br><br>Formerly the Creative Conceptualist & Copywriter for the transmedia agency Five33, Daniel worked on tentpole titles for Disney, Universal, Fox, Paramount and Warner Bros. He then served as Legendary's Mythology Manager (yes that was the actual job title) where he oversaw and expanded cinematic universes for Pacific Rim, Godzilla and Warcraft among others.<br><br>As Tangent’s Chief Strategy Officer, Daniel lends his expertise to studios, networks and brands looking to develop IP, expand franchises and invigorate consumers with the highest levels of quality and creativity. Daniel oversees a team of copywriters, researchers and analysts to make sure every campaign is well-informed and on-brand.</p>
+
+    <p id="mat" class="team-bios__bio">Mat is an experienced designer with an adaptive visual style. Throughout his career, his versatile talents have been utilized by the worlds of fashion, entertainment marketing and most recently television, where he created print campaigns for the Oprah Winfrey Network. Mat has worked with a comprehensive array of film studios including Disney, Paramount, Universal, DreamWorks, Warner Bros., Legendary, Film District, Lionsgate, Fox and Summit. From blockbuster sci-fi to all-ages animation, his area of expertise has no boundaries. Mat oversees Tangent’s growing design team, fostering an environment of creative excellence.</p>
+</div>
+
+<div class="preload">
+    <img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/5729423960b5e9e5b973574d/1462321723394/team-1b.jpg">
+    <img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/5729423a60b5e9e5b9735756/1462321723635/team-2b.jpg">
+    <img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/57484d9f60b5e9b81420fada/1464356256805/team-3b-flip.jpg">
+    <img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/5729422462cd949e41c94937/5729423b356fb092b258c8fc/1462321724517/team-4b.jpg">
+</div>
+
+<script>
+$('.team-members__member').on('click', function() {
+    var $this = $(this);
+    var member = $this.find('.team-members__photo').data('member');
+    var memberPhoto = $this.find('.team-members__photo');
+    var memberID = '#' + member;
+    var memberParent = $this.parent();
+    var $headerHeight = $('header').outerHeight();
+
+    $('html, body').animate({
+        scrollTop: $this.offset().top -$headerHeight
+    }, 700);
+
+    $('.team-members__member').removeClass('team-members__member--active');
+    $('.team-members__photo').removeClass('team-members__photo--active');
+    memberPhoto.addClass('team-members__photo--active');
+    $this.addClass('team-members__member--active');
+    $('.team-bios__bio').hide();
+    $(memberID).fadeIn();
+});
+</script>

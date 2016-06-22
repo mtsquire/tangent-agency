@@ -1,0 +1,133 @@
+<style>
+        ul.tabs{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        ul.tabs li{
+            background: none;
+            color: #222;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-align: center;
+          flex-grow: 2;
+        }
+
+ul.tabs li img {
+  width: 50px;
+  opacity: .4;
+  padding-bottom: 10px;
+  border-bottom: 3px solid transparent;
+}
+
+@media screen and (min-width: 580px) {
+  ul.tabs li img {
+    width: 100px;
+  }
+}
+
+        ul.tabs li.current img,
+        ul.tabs li:hover img{
+            opacity: 1;
+            border-bottom: 3px solid #ed4338;
+        }
+
+        .tab-content{
+            display: none;
+            text-align: center;
+            padding: 15px 15px 0;
+        }
+
+        .tab-content h3 {
+            text-align:center;
+        }
+
+        .tab-content.current{
+            display: inherit;
+        }
+
+        .tab-content-list {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .tab-content-list li {
+            float: none;
+            width: 100%;
+            padding-bottom: 10px;
+            padding-left
+        }
+
+  @media screen and (min-width: 800px) {
+    .tab-content-list li {
+            float: left;
+            width: 50%;
+            padding-bottom: 10px;
+            word-wrap: break-word;
+      }
+  }
+</style>
+
+<div class="container">
+
+    <ul class="tabs">
+        <li class="tab-link" data-tab="tab-1"><img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/572fd77c1bbee07454dd9090/572fd790044262a7f8c19d58/1462753170488/discovery.png?format=2500w"></li>
+        <li class="tab-link" data-tab="tab-2"><img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/572fd77c1bbee07454dd9090/572fd791044262a7f8c19d62/1462753170513/strategy.png?format=2500w"></li>
+
+        <li class="tab-link" data-tab="tab-3"><img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/572fd77c1bbee07454dd9090/572fd7904d088ea3a8f92345/1462753170498/marketing.png?format=2500w"></li>
+        <li class="tab-link" data-tab="tab-4"><img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/572fd77c1bbee07454dd9090/572fd7914d088ea3a8f92348/1462753170947/sales.png?format=2500w"></li>
+        <li class="tab-link" data-tab="tab-5"><img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/572fd77c1bbee07454dd9090/572fd7904d088ea3a8f92341/1462753170482/branding.png?format=2500w"></li>
+        <li class="tab-link" data-tab="tab-6"><img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/572fd77c1bbee07454dd9090/572fd790044262a7f8c19d5c/1462753170480/experiential.png?format=2500w"></li>
+
+            <li class="tab-link" data-tab="tab-7"><img src="https://static1.squarespace.com/static/5705a1807c65e4719912d05c/572fd77c1bbee07454dd9090/572fd791044262a7f8c19d5f/1462753170693/mythology.png?format=2500w"></li>
+
+    </ul>
+
+    <div id="tab-1" class="tab-content">
+        <p>Immersive analysis & insights to inform the strategy, define the brand and inspire creative ideation.</p>
+    </div>
+    <div id="tab-2" class="tab-content">
+        <p>Crafting a fully-integrated strategy that provides the creative bedrock for the entire lifetime of your IP.</p>
+    </div>
+    <div id="tab-3" class="tab-content">
+        <p>Designing purpose-driven internal and consumer facing materials for every facet of your property.</p>
+
+    </div>
+    <div id="tab-4" class="tab-content">
+        <p>Creating impactful presentation tools to give your property the standout quality it deserves.</p>
+    </div>
+    <div id="tab-5" class="tab-content">
+        <p>Capturing your brand’s core DNA and defining its visual identity across every platform on which it lives.</p>
+
+    </div>
+    <div id="tab-6" class="tab-content">
+        <p>Conceptualizing on-brand experiences and bringing them to life through clutter-breaking activations.</p>
+
+    </div>
+    <div id="tab-7" class="tab-content">
+        <p>IP development, in-world lore and cross-platform activations to build endlessly-engaging story universes - ensuring the highest degree of creativity and consistency.</p>
+    </div>
+</div><!-- container -->
+
+<script>
+$(document).ready(function(){
+
+    $('ul.tabs li').click(function(){
+        var tab_id = $(this).attr('data-tab');
+        var $headerHeight = $('header').outerHeight();
+
+        $('ul.tabs li').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+
+        $('html, body').animate({
+            scrollTop: $('ul.tabs').offset().top -$headerHeight
+        }, 700);
+    });
+});
+</script>
